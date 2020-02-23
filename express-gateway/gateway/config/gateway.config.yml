@@ -1,0 +1,43 @@
+http:
+  port: 3000
+admin:
+  port: 9876
+  host: localhost
+apiEndpoints:
+  short:
+    host: localhost
+    paths: 
+      - '/short/*'
+  track:
+    host: localhost
+    paths: 
+      - '/track/*'
+serviceEndpoints:
+  short:
+    url: 'http://localhost:3001'
+  track:
+    url: 'http://localhost:3002'
+policies:
+  - basic-auth
+  - cors
+  - expression
+  - key-auth
+  - log
+  - oauth2
+  - proxy
+  - rate-limit
+pipelines:
+  - name: short
+    apiEndpoints:
+      - short
+    policies:
+      - proxy:
+        - action:
+            serviceEndpoint: short
+  - name: track
+    apiEndpoints:
+      - track
+    policies:
+      - proxy:
+        - action:
+            serviceEndpoint: track

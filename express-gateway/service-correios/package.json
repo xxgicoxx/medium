@@ -1,0 +1,16 @@
+{
+  "name": "service-correios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "correios.js": "^2.0.2",
+    "express": "^4.17.1"
+  }
+}
