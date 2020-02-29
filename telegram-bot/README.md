@@ -1,0 +1,1 @@
+# [Desenvolvendo um bot para o Telegram em 2 minutos com BotGen e Node.js](https://medium.com/@giovanioliveira_/desenvolvendo-um-bot-para-o-telegram-em-2-minutos-com-botgen-e-node-js-762951d64f51)
